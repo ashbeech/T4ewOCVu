@@ -9,6 +9,7 @@ function Huddl({ huddl }: {
 }): JSX.Element {
   const { useQuery } = useSubgraph(huddl);
 
+  // ENTER YOUR QUERY HERE
   const { error, loading, data } = useQuery(gql`
   {
     exampleEntities(first: 10) {
@@ -33,7 +34,7 @@ function Huddl({ huddl }: {
 
 export default function App(): JSX.Element {
   const huddl = useCreateSubgraph({
-    [Chains.MAINNET]: 'https://api.studio.thegraph.com/query/5422/akl4m8c9/0.0.1',
+    [Chains.MAINNET]: 'https://api.studio.thegraph.com/query/5422/akl4m8c9/0.0.1', // <-- ENTER YOUR QUERY URL HERE
   });
 
   const subgraphs = React.useMemo((): Subgraphs => {
