@@ -9,6 +9,7 @@ This is currently designed as a sandbox for building-out a full ReactJS frontend
 ### Subgraph Instance v0.1.1 (full contract index)
 
 [Link to Temporary SubGraph](https://thegraph.com/studio/subgraph/akl4m8c9/)
+
 [Link to Temporary End Point (v0.1.1)](https://api.studio.thegraph.com/query/5422/akl4m8c9/0.1.0)
 
 ```javascript
