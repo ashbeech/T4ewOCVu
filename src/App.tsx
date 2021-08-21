@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { gql } from "@apollo/client";
 import { Container } from "@chakra-ui/layout";
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { Chains, Subgraph, Subgraphs, TheGraphProvider, useCreateSubgraph, useSubgraph } from "thegraph-react";
+import GetMedia from 'GetMedia.js';
 
-const version = "0.0.5";
+const version = "0.1.0";
 const subgraph = "akl4m8c9";
 const api_url = 'https://api.studio.thegraph.com/query/5422/' + subgraph + '/' + version; // <-- ENTER YOUR SUBGRAPH NODE URL HERE
 const input = Object();
+const ipfs_prefix = "https://ipfs.io/ipfs/"; // "https://huddln.mypinata.cloud/";
 
 function Parse(input:unknown) {
 
   let _input = Object(input);
   //Debug in-browser
-  //console.log(_input);
-
-  let render = JSON.parse(_input.token.tokenURI);
+  console.log(_input);
 
   return (
-    <img src={render} alt=""/>
+    <Image src={ipfs_prefix + _input  }/>
     );
 
 }
