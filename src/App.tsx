@@ -5,7 +5,7 @@ import { Box, Image } from "@chakra-ui/react";
 import { Chains, Subgraph, Subgraphs, TheGraphProvider, useCreateSubgraph, useSubgraph } from "thegraph-react";
 import GetMedia from 'GetMedia.js';
 
-const version = "0.1.0";
+const version = "0.1.1";
 const subgraph = "akl4m8c9";
 const api_url = 'https://api.studio.thegraph.com/query/5422/' + subgraph + '/' + version; // <-- ENTER YOUR SUBGRAPH NODE URL HERE
 const input = Object();

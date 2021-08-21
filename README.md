@@ -6,13 +6,13 @@ This project is a framework to develop web/mobile frontend for subgraph backend.
 
 This is currently designed as a sandbox for building-out a full ReactJS frontend, but you are able to build your own queries for testing in-app (start at [App.jsx](src/App.jsx)) or run queries via the query explorer in a hosted instance of the subgraph:
 
-### Subgraph Instance v0.1.0 (full contract index)
+### Subgraph Instance v0.1.1 (full contract index)
 
 [Link to Temporary SubGraph](https://thegraph.com/studio/subgraph/akl4m8c9/)
-[Link to Temporary End Point (v0.1.0)](https://api.studio.thegraph.com/query/5422/akl4m8c9/0.1.0)
+[Link to Temporary End Point (v0.1.1)](https://api.studio.thegraph.com/query/5422/akl4m8c9/0.1.0)
 
 ```javascript
-const version = "0.1.0";
+const version = "0.1.1";
 const subgraph = "akl4m8c9";
 const api_url =
   "https://api.studio.thegraph.com/query/5422/" + subgraph + "/" + version; // <-- ENTER YOUR SUBGRAPH NODE URL HERE
