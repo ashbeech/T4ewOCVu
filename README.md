@@ -61,7 +61,7 @@ query tokenSelector {
 }
 
 # Get owner's tokens (first 10)
-query getOwbersTokenByOwner {
+query tokenByOwner {
   owner(id: "0xb71147d12e2ec640decc103bd126911d23ae2fba") {
     id
     tokens(first: 10, orderBy: mintTime, orderDirection: asc) {
@@ -74,7 +74,7 @@ query getOwbersTokenByOwner {
 }
 
 # Get owner's tokens (paginated e.g. page 2, next 10)
-query getOwbersTokenByOwner {
+query tokenByOwner {
   owner(id: "0xb71147d12e2ec640decc103bd126911d23ae2fba") {
     id
     tokens(first: 10, skip: 10, orderBy: mintTime, orderDirection: asc) {
@@ -98,7 +98,7 @@ query filterOwnersTokens {
   }
 }
 
-query getTokensByMinter {
+query tokensByMinter {
   tokens(
     first: 1
     where: { minter: "0xb71147d12e2ec640decc103bd126911d23ae2fba" }
@@ -120,7 +120,7 @@ query getTokensByMinter {
 }
 
 # Get all tokens under contract. Returns unique token IDs
-query getTokensByContract {
+query tokensByContract {
   tokenContracts {
     id
     name
