@@ -40,6 +40,29 @@ query tokenFireHose {
     }
   }
 }
+# Get top 5 minters
+query topMinters {
+  owners(first: 5, orderBy: numMints, orderDirection: desc) {
+    id
+    numMints
+  }
+}
+
+# Every token minted past 24 hours.
+# $timeWindow variable required and must be passed as seconds.
+# For 24 hours worth of posts minted: $timeWindow = {number:$nowInSecs-$24hrInSecs} i.e. 1629717277-86400 = 1629630877
+# More on variables: https://thegraph.com/docs/developer/graphql-api#example-3 and https://graphql.org/learn/queries/
+query latestMints($timeWindow: BigInt!) {
+  tokens(
+    first: 5
+    where: { mintTime_lt: $timeWindow }
+    orderBy: mintTime
+    orderDirection: desc
+  ) {
+    id
+    mintTime
+  }
+}
 
 # Get specific token data by ID (minting contract address + token ID)
 query tokenSelector {
